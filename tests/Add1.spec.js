@@ -1,5 +1,7 @@
 const {test ,expect} =require ('@playwright/test')
 
+//MoreValidations.spec.js  this class need to add
+
 test ("Popup validations" ,async({page})=>
 {
 
@@ -25,3 +27,4 @@ await page.locator("#mousehover").hover();
 
 }
 )
+
