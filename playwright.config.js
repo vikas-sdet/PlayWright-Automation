@@ -1,31 +1,27 @@
 // @ts-check
-import {  chromium, defineConfig, devices } from '@playwright/test';
-
+import { defineConfig } from '@playwright/test';
 
 /**
  * @see https://playwright.dev/docs/test-configuration
  */
-const config = ({
+export default defineConfig({
+  testDir: './tests',
 
-  testDir: './tests',  //in this place of tests we add which class we want to run
+  timeout: 50 * 1000,
 
-  timeout :40*1000,
-  expect :{
-    timeout :5000,
+  expect: {
+    timeout: 6000,
   },
 
-  reporter :'html',
+  reporter: 'html',
 
   use: {
+    browserName: 'chromium',
+    headless: false,
+    screenshot: 'on',
+    trace: 'on',
 
-    browserName :'chromium',
-    //we dont need to use headed in test running
-    headless :false
-   
-  
+    //screenshot for only fail test case
+    //trace : 'retain-on-failure',
   },
-   
-
-
 });
-module.exports=config
