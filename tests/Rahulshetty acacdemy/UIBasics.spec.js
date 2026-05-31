@@ -1,4 +1,4 @@
-const {test, expect} =require('@playwright/test');
+const {test, expect} = require('@playwright/test');
 const { text } = require('node:stream/consumers');
 
 test('Browser context Playwright test',async ({browser})=>   // => it shows anonymous

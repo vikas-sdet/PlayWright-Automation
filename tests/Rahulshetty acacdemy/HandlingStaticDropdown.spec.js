@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test');
 
-test('Statis DropDown' , async ({page}) => 
+test('Static DropDown' , async ({page}) => 
 {
 await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
 const Svalue=page.locator("#dropdown-class-example");

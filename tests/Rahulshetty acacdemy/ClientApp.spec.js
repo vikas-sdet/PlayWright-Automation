@@ -2,7 +2,7 @@ const {test, expect} = require('@playwright/test');
 
 test('Add one iteam from ui' , async ({page}) => 
 {
-    const productName=page.locator("ZARA COAT 3");
+const productName=page.locator("ZARA COAT 3");
 const products =page.locator(".card-body");
 await page.goto("https://rahulshettyacademy.com/client");
 await page.locator('#userEmail').fill('sanju@contact.com');
